@@ -14,7 +14,7 @@ def classify_temperature_breach(coolingType, temperatureInC):
     'MED_ACTIVE_COOLING':{'lowerLimit':0,'upperLimit':40}
   }
   lowerLimit = coolinglimit[coolingType]['lowerLimit']
-  upperLimit = limit_defn[coolingType]['upperLimit']
+  upperLimit = coolinglimit[coolingType]['upperLimit']
   return infer_breach(temperatureInC, lowerLimit, upperLimit)
 
 
